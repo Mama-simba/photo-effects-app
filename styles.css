@@ -1,0 +1,76 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image area */
+main {
+    flex: 3;
+}
+
+canvas {
+    width: 100%;
+}
+
+/* Side bar area */
+
+aside{
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+label{
+    font-size: 1.4rem;
+    padding-right: 1.6rem;
+}
+
+.input-wrapper {
+    background-color: lightblue;
+    padding: 1.6rem;
+}
+
+button {
+    text-align: left;
+    background-color:darkblue;
+    padding: 1rem 0 1rem 2rem;
+    font-size: 1rem;
+    color:aliceblue;
+    border: none;
+    border-bottom: 1px solid;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: antiquewhite;
+    color: black;
+}
+
+.effects {
+    display: flex;
+    flex-direction: column;
+}
+
+.controls {
+    display: flex;
+}
+
+.controls > button {
+    flex: 1;
+    border-bottom: none;
+    text-align: center;
+    padding: 1.6rem 0;
+}
+
+@media(min-width: 1000px) {
+    body {
+      flex-direction: row;
+    }
+}
