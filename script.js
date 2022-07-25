@@ -77,4 +77,18 @@ document.querySelectorAll("button")[2].addEventListener('click', invert);
 
 
 
-// ADDITIONAL EFFECTS
+// ADDITIONAL RGB EFFECTS
+
+function rbg(){
+    const imageData = ctx.getImageData(0,0, canvas.width, canvas.height);
+    const data = imageData.data;
+    for(let i = 0; i < data.length; i+= 4){
+        const green = data[i + 1]
+        data[i] = data[i]; 
+        data[i + 1] = data[i + 2]; 
+        data[i + 2] = green; 
+    }
+     ctx.putImageData(imageData, 0, 0);
+}
+
+document.querySelectorAll("button")[3].addEventListener('click', rbg);
