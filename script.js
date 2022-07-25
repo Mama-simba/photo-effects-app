@@ -79,6 +79,7 @@ document.querySelectorAll("button")[2].addEventListener('click', invert);
 
 // ADDITIONAL RGB EFFECTS
 
+
 function rbg(){
     const imageData = ctx.getImageData(0,0, canvas.width, canvas.height);
     const data = imageData.data;
@@ -92,3 +93,51 @@ function rbg(){
 }
 
 document.querySelectorAll("button")[3].addEventListener('click', rbg);
+
+
+
+function bgr(){
+    const imageData = ctx.getImageData(0,0, canvas.width, canvas.height);
+    const data = imageData.data;
+    for(let i = 0; i < data.length; i+= 4){
+        const red = data[i]
+        data[i] = data[i + 2]; 
+        data[i + 1] = data[i + 1]; 
+        data[i + 2] = red; 
+    }
+     ctx.putImageData(imageData, 0, 0);
+}
+
+document.querySelectorAll("button")[4].addEventListener('click', bgr);
+
+
+
+function gbr(){
+    const imageData = ctx.getImageData(0,0, canvas.width, canvas.height);
+    const data = imageData.data;
+    for(let i = 0; i < data.length; i+= 4){
+        const red = data[i]
+        data[i] = data[i + 1]; 
+        data[i + 1] = data[i + 2]; 
+        data[i + 2] = red; 
+    }
+     ctx.putImageData(imageData, 0, 0);
+}
+
+document.querySelectorAll("button")[5].addEventListener('click', gbr);
+
+
+
+function grb(){
+    const imageData = ctx.getImageData(0,0, canvas.width, canvas.height);
+    const data = imageData.data;
+    for(let i = 0; i < data.length; i+= 4){
+        const red = data[i]
+        data[i] = data[i + 1]; 
+        data[i + 1] = red; 
+        data[i + 2] = data[i + 2]; 
+    }
+     ctx.putImageData(imageData, 0, 0);
+}
+
+document.querySelectorAll("button")[6].addEventListener('click', grb);
