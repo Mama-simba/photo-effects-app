@@ -73,3 +73,26 @@ button:hover{
       flex-direction: row;
     }
 }
+
+
+
+footer {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    font-family: "Source Code Pro", monospace;
+}
+
+footer a {
+    text-decoration: none;
+    padding-right: 4px;
+    color: #395B64;
+    cursor: pointer;
+}
+
+footer a:hover {
+    color: white;
+    text-shadow: #395B64;
+    font-weight: bold;
+    text-decoration: underline;
+}
