@@ -141,3 +141,25 @@ function grb(){
 }
 
 document.querySelectorAll("button")[6].addEventListener('click', grb);
+
+
+// CLEAR BUTTON
+
+function clearChanges(){
+    img.src = reader.result;
+}
+
+document.querySelectorAll("button")[7].addEventListener('click', clearChanges);
+
+
+// DOWNLOAD BUTTON
+
+function download(){
+    const image = canvas.toDataURL();
+    const link = document.createElement('a');
+    link.href = image;
+    link.download = "image.png";
+    link.click();
+}
+
+document.querySelectorAll("button")[8].addEventListener('click', download);
